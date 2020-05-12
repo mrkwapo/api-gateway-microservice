@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: api-gateway
+server:
+  port: 8082
+zuul:
+  routes:
+    current-data-microservice:
+      path: /api/**
+      service-id: search-current-data-microservice
+eureka:
+  client:
+    service-url:
+      defaulZone: http://localhost:8761/eureka
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000       
