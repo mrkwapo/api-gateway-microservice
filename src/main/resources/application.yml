@@ -3,11 +3,11 @@ spring:
     name: api-gateway
 server:
   port: 8082
-zuul:
-  routes:
-    current-data-microservice:
-      path: /api/**
-      service-id: search-current-data-microservice
+#zuul:
+#  routes:
+#    current-data-microservice:
+#      path: /api2/**
+#      service-id: current-data-microservice
 eureka:
   client:
     service-url:
